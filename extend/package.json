@@ -1,0 +1,35 @@
+{
+  "name": "@charrue/vite-plugin-pages-extend",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "resolve custom route block in @charrue/vite-plugin-pages",
+  "license": "MIT",
+  "author": "ckangwen",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./global": {
+      "types": "./global.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "global.d.ts"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "vite": "^4.0.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
