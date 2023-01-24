@@ -1,7 +1,7 @@
 {
   "name": "@charrue/vite-plugin-pages-extend",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "resolve custom route block in @charrue/vite-plugin-pages",
   "license": "MIT",
   "author": "ckangwen",
