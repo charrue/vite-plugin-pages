@@ -1,9 +1,10 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import Pages from 'vite-plugin-pages'
+import Pages from '@charrue/vite-plugin-pages'
 import Markdown from 'vite-plugin-vue-markdown'
 import Inspect from 'vite-plugin-inspect'
+import type { Plugin } from 'vite'
 
 const config = defineConfig({
   plugins: [
@@ -32,13 +33,13 @@ const config = defineConfig({
           }
         }
       },
-    }),
+    }) as Plugin,
     // test multiple instances
     Pages({
       dirs: '../react/src/pages',
       resolver: 'react',
       moduleId: '~admin-pages',
-    }),
+    }) as Plugin,
     Markdown(),
     Inspect(),
   ],

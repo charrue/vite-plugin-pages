@@ -1,8 +1,8 @@
 {
-  "name": "vite-plugin-pages",
+  "name": "@charrue/vite-plugin-pages",
   "version": "0.28.0",
   "packageManager": "pnpm@7.21.0",
-  "description": "File system base vue-router plugin for Vite",
+  "description": "[charrue]File system base vue-router plugin for Vite",
   "keywords": [
     "vite",
     "vue",
@@ -15,10 +15,10 @@
     "routing"
   ],
   "license": "MIT",
-  "author": "hannoeru <me@hanlee.co>",
+  "author": "ckangwen",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hannoeru/vite-plugin-pages"
+    "url": "https://github.com/charrue/vite-plugin-pages"
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -46,12 +46,14 @@
     "client-solid.d.ts",
     "LICENSE"
   ],
-  "homepage": "https://github.com/hannoeru/vite-plugin-pages",
-  "bugs": "https://github.com/hannoeru/vite-plugin-pages/issues",
+  "homepage": "https://github.com/ckangwen/vite-plugin-pages",
+  "bugs": "https://github.com/ckangwen/vite-plugin-pages/issues",
   "scripts": {
     "dev": "npm run build -- --watch --ignore-watch examples",
     "build": "tsup",
+    "build:extend": "pnpm --filter @charrue/vite-plugin-pages-extend build",
     "play": "pnpm --filter vue dev",
+    "play:extend": "pnpm --filter extend dev",
     "play:react": "pnpm --filter react dev",
     "prepublishOnly": "npm run build",
     "release": "bumpp --commit --tag --push",
@@ -111,5 +113,9 @@
         "vite": "*"
       }
     }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
