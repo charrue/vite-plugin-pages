@@ -1,11 +1,10 @@
-# vite-plugin-pages
+# @charrue/vite-plugin-pages
 
-[![npm version](https://badgen.net/npm/v/vite-plugin-pages)](https://www.npmjs.com/package/vite-plugin-pages)
-[![monthly downloads](https://badgen.net/npm/dm/vite-plugin-pages)](https://www.npmjs.com/package/vite-plugin-pages)
-[![types](https://badgen.net/npm/types/vite-plugin-pages)](https://github.com/hannoeru/vite-plugin-pages/blob/main/src/types.ts)
-[![license](https://badgen.net/npm/license/vite-plugin-pages)](https://github.com/hannoeru/vite-plugin-pages/blob/main/LICENSE)
+[![npm version](https://badgen.net/npm/v/@charrue/vite-plugin-pages)](https://www.npmjs.com/package/@charrue/vite-plugin-pages)
+[![monthly downloads](https://badgen.net/npm/dm/@charrue/vite-plugin-pages)](https://www.npmjs.com/package/@charrue/vite-plugin-pages)
+[![types](https://badgen.net/npm/types/@charrue/vite-plugin-pages)](https://github.com/hannoeru/@charrue/vite-plugin-pages/blob/main/src/types.ts)
+[![license](https://badgen.net/npm/license/@charrue/vite-plugin-pages)](https://github.com/hannoeru/@charrue/vite-plugin-pages/blob/main/LICENSE)
 
-[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/hannoeru/vite-plugin-pages)
 
 > File system based routing for Vue 3 / React / Solid applications using
 > [Vite](https://github.com/vitejs/vite)
@@ -17,7 +16,7 @@
 Install:
 
 ```bash
-npm install -D vite-plugin-pages
+npm install -D @charrue/vite-plugin-pages
 npm install vue-router
 ```
 
@@ -28,7 +27,7 @@ npm install vue-router
 Install:
 
 ```bash
-npm install -D vite-plugin-pages
+npm install -D @charrue/vite-plugin-pages
 npm install react-router react-router-dom 
 ```
 
@@ -37,7 +36,7 @@ npm install react-router react-router-dom
 Install:
 
 ```bash
-npm install -D vite-plugin-pages
+npm install -D @charrue/vite-plugin-pages
 npm install @solidjs/router
 ```
 
@@ -46,7 +45,7 @@ npm install @solidjs/router
 Add to your `vite.config.js`:
 
 ```js
-import Pages from 'vite-plugin-pages'
+import Pages from '@charrue/vite-plugin-pages'
 
 export default {
   plugins: [
@@ -80,7 +79,7 @@ const router = createRouter({
 
 ```ts
 // vite-env.d.ts
-/// <reference types="vite-plugin-pages/client" />
+/// <reference types="@charrue/vite-plugin-pages/client" />
 ```
 
 ### React
@@ -116,7 +115,7 @@ ReactDOM.render(
 
 ```ts
 // vite-env.d.ts
-/// <reference types="vite-plugin-pages/client-react" />
+/// <reference types="@charrue/vite-plugin-pages/client-react" />
 ```
 
 ### Solid
@@ -145,7 +144,7 @@ render(
 
 ```ts
 // vite-env.d.ts
-/// <reference types="vite-plugin-pages/client-solid" />
+/// <reference types="@charrue/vite-plugin-pages/client-solid" />
 ```
 
 ## Configuration
@@ -155,7 +154,7 @@ plugin:
 
 ```js
 // vite.config.js
-import Pages from 'vite-plugin-pages'
+import Pages from '@charrue/vite-plugin-pages'
 
 export default {
   plugins: [
@@ -391,6 +390,8 @@ generated client code.
 - **Type:** `(content: string, path: string) => Awaitable<CustomBlock | void>`
 
 A function that takes page file content and path, and optionally returns route data.
+
+See [@charrue/vite-plugin-pages-extend](https://github.com/charrue/vite-plugin-pages/blob/main/extend/README.md)
 
 
 ### SFC custom block for Route Data
